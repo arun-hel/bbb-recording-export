@@ -239,7 +239,7 @@ if deskshare
 "'[4]scale=w=320:h=240[webcams];[5]scale=w=1600:h=1080:force_original_aspect_ratio=1[deskshare];[0][deskshare]overlay=x=320[screenshare];[screenshare][1]overlay=x=320[whiteboard];[whiteboard][2]overlay=x=320[cursor];[cursor][3]overlay[chat];[chat][webcams]overlay' " \
 "-c:a aac -shortest -y #{published_files}/meeting.mp4"
 else
-  render = "ffmpeg nostats -f lavfi -i color=c=white:s=1920x1080 " \
+  render = "ffmpeg -nostats -f lavfi -i color=c=white:s=1920x1080 " \
 "-f concat -safe 0 -i #{published_files}/timestamps/whiteboard_timestamps " \
  "-f concat -safe 0 -i #{published_files}/timestamps/cursor_timestamps " \
  "-f concat -safe 0 -i #{published_files}/timestamps/chat_timestamps " \
