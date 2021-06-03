@@ -1,1 +1,3 @@
-render*.rb
+render_chat.rb
+render_cursor.rb
+render_whiteboard.rb
